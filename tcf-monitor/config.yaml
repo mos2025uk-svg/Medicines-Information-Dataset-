@@ -1,0 +1,42 @@
+# TCF Canada exam centres in Vancouver to watch.
+#
+# For each centre:
+#   url              page that lists TCF sessions / registration
+#   selector         (optional) CSS selector to narrow the page to the sessions area
+#   open_keywords    if ANY of these appear (case-insensitive) -> treated as OPEN
+#   closed_keywords  if these were present and ALL disappear -> treated as OPEN
+#   alert_on_change  also alert whenever the watched text changes at all
+#
+# NOTE: keywords below are starting points. Open each page in your browser
+# while registration is closed, copy the exact "full / not available" sentence
+# into closed_keywords, and adjust.
+
+centres:
+  - name: Alliance Française Vancouver (6161 Cambie St)
+    url: https://www.alliancefrancaise.ca/en/language/exams/tcf-canada/
+    selector: main
+    open_keywords:
+      - "register now"
+      - "registration is open"
+      - "inscriptions ouvertes"
+      - "add to cart"
+      - "book now"
+    closed_keywords:
+      - "sold out"
+      - "complet"
+      - "registration is closed"
+      - "no sessions available"
+    alert_on_change: true
+
+  - name: Ashton Testing Services (1190 Melville St)
+    url: https://www.ashtontesting.com/
+    selector: ""
+    open_keywords:
+      - "book now"
+      - "register now"
+      - "seats available"
+    closed_keywords:
+      - "sold out"
+      - "fully booked"
+      - "no seats"
+    alert_on_change: true
