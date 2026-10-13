@@ -1,0 +1,4 @@
+# GBD data are subject to the IHME data-use agreement - never commit raw exports
+data/user_inputs/
+data/processed/
+__pycache__/
